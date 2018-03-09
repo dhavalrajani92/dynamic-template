@@ -10,14 +10,11 @@ Template.dropdown.onCreated(function (){
     this.arrowClassName = new ReactiveVar(0);
     this.activeOptionClassName = new ReactiveVar(0);
     var data = Template.currentData();
-    if(data && data.classes){
-        var classNames = data.classes.split(" ");
-        if(classNames.length === 2){
-            arrowClassName = classNames[0];
-            activeOptionClassName = classNames[1];
-        }else if(classNames.length === 1){
-            arrowClassName = classNames[0];
-        }
+    if(data && data.arrowClass){
+        arrowClassName = Template.instance().data.arrowClass;
+    }
+    if(data && data.activeOptionClass){
+        activeOptionClassName = data.activeOptionClass;
     }
     this.arrowClassName.set(arrowClassName);
     this.activeOptionClassName.set(activeOptionClassName);
