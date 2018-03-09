@@ -1,0 +1,46 @@
+<head>
+  <title>dropdown_app</title>
+</head>
+
+<body>
+  <!--{{> defaultDropdown}}-->
+     <br><br><br>
+    {{> greenDropdown}}
+
+</body>
+
+<template name="defaultDropdown">
+
+    {{> dropdown}}
+</template>
+
+<template name="greenDropdown">
+    <div class="container">
+        {{> dropdown}}
+        {{> dropdown classes="theme1Arrow theme1activeOption"}}
+        {{> dropdown classes="theme2Arrow theme2activeOption"}}
+        {{> dropdown classes="theme1Arrow"}}
+    </div>
+</template>
+
+<template name="dropdown">
+
+        <div class="dd-container">
+            <div class="dd-arrow-container">
+                <div class="dd-arrow-box">
+                    <div class="{{getArrowClass}}"></div>
+                </div>
+            </div>
+            <div class="dd-value">
+
+            </div>
+            <div class="dd-data">
+                <ul>
+                    <li><span>Option 1</span></li>
+                    <li><span>Option 2</span></li>
+                    <li class="{{getActiveOptionClass}}"><span>Option 3</span></li>
+                    <li><span>Option 4</span></li>
+                </ul>
+            </div>
+        </div>
+</template>
