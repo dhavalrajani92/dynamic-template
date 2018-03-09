@@ -4,24 +4,20 @@ Template.theme2.helpers({
     getData(){
         return [
             {
-                key:"option1",
-                value:"option1",
-                active: "theme2activeOption"
+                _id:"1",
+                text:"option1"
             },
             {
-                key:"option2",
-                value:"option2",
-                active: ""
+                _id:"2",
+                text:"option2"
             },
             {
-                key:"option3",
-                value:"option3",
-                active: ""
+                _id:"3",
+                text:"option3"
             },
             {
-                key:"option4",
-                value:"option4",
-                active: ""
+                _id:"4",
+                text:"option4"
             },
         ]
     }
