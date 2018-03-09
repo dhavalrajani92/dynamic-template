@@ -1,0 +1,20 @@
+<template name="dropdown">
+
+    <div class="dd-container">
+        <div class="dd-arrow-container">
+            <div class="dd-arrow-box">
+                <div class="{{getArrowClass}}"></div>
+            </div>
+        </div>
+        <div class="dd-value">
+
+        </div>
+        <div class="dd-data">
+            <ul>
+                {{#each data}}
+                    <li class="{{getActiveOptionClass @index}}"><span>{{key}}</span></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>

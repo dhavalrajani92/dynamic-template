@@ -3,43 +3,7 @@
 </head>
 
 <body>
-  <!--{{> defaultDropdown}}-->
-     <br><br><br>
-    {{> greenDropdown}}
+   {{> yield}}
 
 </body>
 
-<template name="defaultDropdown">
-
-    {{> dropdown}}
-</template>
-
-<template name="greenDropdown">
-    <div class="container">
-        {{> dropdown}}
-        {{> dropdown arrowClass="theme1Arrow" activeOptionClass="theme1activeOption"}}
-        {{> dropdown arrowClass="theme2Arrow" activeOptionClass="theme2activeOption"}}
-    </div>
-</template>
-
-<template name="dropdown">
-
-        <div class="dd-container">
-            <div class="dd-arrow-container">
-                <div class="dd-arrow-box">
-                    <div class="{{getArrowClass}}"></div>
-                </div>
-            </div>
-            <div class="dd-value">
-
-            </div>
-            <div class="dd-data">
-                <ul>
-                    <li><span>Option 1</span></li>
-                    <li><span>Option 2</span></li>
-                    <li class="{{getActiveOptionClass}}"><span>Option 3</span></li>
-                    <li><span>Option 4</span></li>
-                </ul>
-            </div>
-        </div>
-</template>
