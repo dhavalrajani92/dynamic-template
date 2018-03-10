@@ -2,7 +2,7 @@ import {Template} from "meteor/templating";
 import {ReactiveVar} from "meteor/reactive-var";
 
 Template.theme2.onCreated(function (){
-    this.selectedData = new ReactiveVar();
+    this.selectedOption = new ReactiveVar();
     this.optionsData = new ReactiveVar();
     this.defaultIndex = new ReactiveVar(3);
     this.optionsData.set([
@@ -31,10 +31,10 @@ Template.theme2.helpers({
         return Template.instance().optionsData.get();
     },
     selectedOption(){
-        return Template.instance().selectedData.get() ? Template.instance().selectedData.get() : Template.instance().optionsData.get()[Template.instance().defaultIndex.get()];
+        return Template.instance().selectedOption.get() ? Template.instance().selectedOption.get() : Template.instance().optionsData.get()[Template.instance().defaultIndex.get()];
     },
     getActiveOptionIndex(){
-        var selectedOption = Template.instance().selectedData.get();
+        var selectedOption = Template.instance().selectedOption.get();
         if(!selectedOption){
             return Template.instance().defaultIndex.get();
         }

@@ -1,0 +1,6 @@
+<template name="defaultTheme">
+    <div class="container">
+        {{> dropdown options=getData activeIndex=getActiveOptionIndex instance=getView}}
+        <a href="{{pathFor 'theme1'}}">Go to Theme1</a>
+    </div>
+</template>

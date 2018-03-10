@@ -7,11 +7,11 @@
             </div>
         </div>
         <div class="dd-value">
-
+            {{getSelectedOption}}
         </div>
         <div class="dd-data">
             <ul>
-                {{#each data}}
+                {{#each options}}
                     <li class="{{getActiveOptionClass @index}} dropdown-option" data-id="{{_id}}"><span>{{text}}</span></li>
                 {{/each}}
             </ul>
