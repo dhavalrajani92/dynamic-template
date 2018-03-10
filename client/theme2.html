@@ -1,6 +1,9 @@
 <template name="theme2">
     <div class="container">
-        {{> dropdown arrowClass="theme2Arrow" activeOptionClass="theme2activeOption" data=getData activeIndex=1}}
+        {{#with selectedOption}}
+            {{text}}
+        {{/with}}
+        {{> dropdown arrowClass="theme2Arrow" activeOptionClass="theme2activeOption" data=getData activeIndex=getActiveOptionIndex instance=getView}}
         <a href="/">Go to Default</a>
     </div>
 </template>

@@ -1,6 +1,9 @@
 <template name="theme1">
     <div class="container">
-        {{> dropdown arrowClass="theme1Arrow" activeOptionClass="theme1activeOption" data=getData activeIndex=1}}
+        {{#with selectedOption}}
+            {{text}}
+        {{/with}}
+        {{> dropdown arrowClass="theme1Arrow" activeOptionClass="theme1activeOption" data=getData activeIndex=getActiveOptionIndex instance=getView}}
         <a href="{{pathFor 'theme2'}}">Go to Theme2</a>
     </div>
 </template>

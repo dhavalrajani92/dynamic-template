@@ -49,5 +49,9 @@ Template.dropdown.events({
             $(e.currentTarget).addClass("active");
         }
 
+    },
+    "click .dropdown-option": function (e,t) {
+        e.preventDefault();
+        t.data.instance.selectedData.set(this);
     }
 });
